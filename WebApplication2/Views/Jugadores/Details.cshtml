@@ -4,39 +4,45 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Detalles de jugador</h1>
+
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Posicion</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Equipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
+                @Html.DisplayFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.posicion)
+
+            </th>
+            <th>
+                @Html.DisplayFor(model => model.Edad)
+
+
+            </th>
+
+            <th>
+                @Html.DisplayFor(model => model.Equipo.Id)
+            </th>
+          
+        </tr>
+    </tbody>
+</table>
+
+
+
+
 
 <div>
-    <h4>Jugador</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.posicion)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.posicion)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Edad)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Edad)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Equipo)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Equipo.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a type="button" class="btn btn-secondary" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index" type="button" class="btn btn-primary">Regresar</a>
 </div>

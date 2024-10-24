@@ -4,9 +4,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Crear Jugador </h1>
 
-<h4>Jugador</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,7 +17,7 @@
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="posicion" class="control-label"></label>
+                <label asp-for="posicion" class="control-label">Posicion</label>
                 <select asp-for="posicion" class="form-control" asp-items="Html.GetEnumSelectList<WebApplication2.Models.Jugador.Posicion>()"></select>
             </div>
             <div class="form-group">
@@ -27,18 +26,21 @@
                 <span asp-validation-for="Edad" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdEquipo" class="control-label"></label>
+                <label asp-for="IdEquipo" class="control-label">Equipo</label>
                 <select asp-for="IdEquipo" class ="form-control" asp-items="ViewBag.IdEquipo"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+
+                <input type="submit" value="Crear" class="btn btn-success" />
             </div>
+          
+
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index" type="button" class="btn btn-primary">Regresar</a>
 </div>
 
 @section Scripts {

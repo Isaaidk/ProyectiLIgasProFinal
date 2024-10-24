@@ -17,5 +17,7 @@ namespace WebApplication2.Models
         public int Titulos { get; set; }
         [Required]
         public bool Extranjeros { get; set; }
+
+
     }
 }
